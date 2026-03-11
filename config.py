@@ -15,6 +15,9 @@ DEFAULT_NUM_PAGES = 1
 DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
 DEFAULT_CSV_PATH = os.path.join(DATA_DIR, 'products.csv')
 
+# User-Agent header to mimic a real browser
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+
 
 # Ensure data directory exists
 os.makedirs(DATA_DIR, exist_ok=True)

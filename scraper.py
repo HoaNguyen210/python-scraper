@@ -15,7 +15,8 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 def scrape_page(url: str):
     logging.info(f"Scraping {url}")
     try:
-        response = requests.get(url, timeout=10)
+        headers = {'User-Agent': config.USER_AGENT}
+        response = requests.get(url, timeout=10, headers=headers)
         # Kiểm tra nếu trang không tồn tại (404)
         if response.status_code == 404:
             logging.warning(f"Page not found: {url}")
